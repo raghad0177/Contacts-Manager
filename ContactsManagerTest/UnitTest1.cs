@@ -1,10 +1,7 @@
-using Contacts_Manager;
-
-namespace Contacts_Manager_Test
+namespace ContactsManagerTest
 {
     public class UnitTest1
-    {
-        // Add Case
+    { // Add Case
         [Fact]
         public void AddCaseSuccesfully()
         {
@@ -20,7 +17,7 @@ namespace Contacts_Manager_Test
             string Number = "065050500";
 
             // Act
-            List<string[]> result = Contacts_Manager.CManager.ContactsManager(Action, Contact, CName, Number);
+            List<string[]> result = ContactsManager.CManager.ContactsManager(Action, Contact, CName, Number);
             // Assert
             Assert.Equal(4, result.Count);
         }
@@ -41,7 +38,7 @@ namespace Contacts_Manager_Test
             string Number = "065050500";
 
             // Act
-            List<string[]> result = Contacts_Manager.CManager.ContactsManager(Action, Contact, CName, Number);
+            List<string[]> result = ContactsManager.CManager.ContactsManager(Action, Contact, CName, Number);
             // Assert
             Assert.Equal(3, result.Count);
         }
@@ -61,7 +58,7 @@ namespace Contacts_Manager_Test
         };
             string CName = "Malek";
             // Act
-            List<string[]> result = CManager.ContactsManager(Action, Contact, CName);
+            List<string[]> result = ContactsManager.CManager.ContactsManager(Action, Contact, CName);
 
             // Assert
             Assert.Equal(2, result.Count);
@@ -81,7 +78,7 @@ namespace Contacts_Manager_Test
             new string[] {"Malek","123456" }
         };
             // Act
-            List<string[]> result = Contacts_Manager.CManager.ContactsManager(Action, Contact);
+            List<string[]> result = ContactsManager.CManager.ContactsManager(Action, Contact);
             // Assert
             Assert.Equal(3, result.Count);
         }
